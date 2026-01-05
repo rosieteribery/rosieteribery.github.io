@@ -1,6 +1,204 @@
-<html>
-  <body>  <h1>
-    Rosie Teribery
-  </h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosie | Product Design Strategy</title>
+    <style>
+        /* --- CSS VARIABLES FOR EASY COLOR CHANGES --- */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #2c3e50;
+            --text-light: #5f6c7b;
+            --accent-color: #0f4c81; /* Classic Blue - Trustworthy */
+            --highlight-color: #e2e8f0;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
+        /* --- GLOBAL RESET & TYPOGRAPHY --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 0 60px;
+            max-width: 750px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        /* --- VALUES SECTION (Mission/Vision) --- */
+        .values-section {
+            padding: 60px 0 100px;
+            border-top: 1px solid #e5e5e5;
+            margin-top: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .card h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .card strong {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero { padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">Rosie.</div>
+            <div class="nav-links">
+                <a href="mailto:your-email@example.com">Contact</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <h1>Building trusted, accessible software for high-stakes work.</h1>
+            <p class="subtitle">
+                I design reliable, accessible, and trustworthy products in regulated industries. I help professionals do their work effectively, confidently, and without friction.
+            </p>
+            <a href="#" class="cta-button">View Resume / Work</a>
+        </header>
+
+        <section class="values-section">
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>The Mission</h3>
+                    <p>
+                        To make complex, regulated software humane, usable, and dependable for the people who rely on it.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>The Vision</h3>
+                    <p>
+                        A world where professionals in high-stakes fields are empowered—not burdened—by the tools they use.
+                        <strong>High-stakes software that works for people, not against them.</strong>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Rosie. Creating clarity in complex systems.</p>
+        </footer>
+    </div>
+
+</body>
 </html>
